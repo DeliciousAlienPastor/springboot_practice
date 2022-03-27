@@ -9,11 +9,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-//this is an example of dependancy injection
 //more for semantics; does the same job as declaring it as a bean/component
 @Service
 public class StudentService {
-
+  
+  //this is an example of dependancy injection
   private final StudentRepository studentRepository;
 
   @Autowired

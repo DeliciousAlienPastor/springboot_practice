@@ -12,6 +12,8 @@ import org.springframework.context.annotation.Configuration;
 public class StudentConfig {
   @Bean
   // inject access to StudentRepository
+  // CommandLineRunner is an interface that invokes the run method when the
+  // application starts
   CommandLineRunner commandLineRunner(StudentRepository repository) {
     return args -> {
       // notice the id is not included as this will be auto generated

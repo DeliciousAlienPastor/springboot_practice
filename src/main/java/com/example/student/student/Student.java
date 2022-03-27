@@ -16,15 +16,14 @@ import javax.persistence.Transient;
 public class Student {
   @Id
   @SequenceGenerator(name = "student_sequence", sequenceName = "student_sequence", allocationSize = 1)
-
   @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "student_sequence")
-
   private Long id;
+
   private String name;
   private String email;
   private LocalDate dob;
-  // the 'age' field is not persisted (i.e stored permanently) in the database
   @Transient
+  // the 'age' field is not persisted (i.e stored permanently) in the database
   private Integer age;
 
   public Student() {
